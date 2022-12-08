@@ -96,4 +96,14 @@ const   modalView = document.querySelectorAll('.services_modal'),
               el: ".swiper-pagination",
               clickable: true,
             },
+            breakpoints: {
+                640: {
+                  slidesPerView: 2,
+                },
+                768: {
+                  slidesPerView: 2,
+                  spaceBetween: 48,
+                },
+               
+              },
           });
