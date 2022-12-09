@@ -1,12 +1,22 @@
 /********************Show SIDEBAR****************************** */
-
+const navMenu = document.getElementById('sidebar'),
+navToggle = document.getElementById('navtoggle'),
+navClose = document.getElementById('nav_close')
 /*******************SIDEBAR Show ****************************** */
-/****************VARIABLE IF CONSTANT EXIST***************************** */
 
+/****************VARIABLE IF CONSTANT EXIST***************************** */
+if(navToggle){
+    navToggle.addEventListener("click",() =>{
+        navMenu.classList.add('show-sidebar')
+    })
+}
 /*************************SIDEBAR HIDDEN****************************** */
 /****************VARIABLE IF CONSTANT EXIST***************************** */
-
-
+if(navClose){
+    navClose.addEventListener("click",() =>{
+        navMenu.classList.remove('show-sidebar')
+    })
+}
 
 
 /******************SKILLS TABLS****************************** */
@@ -107,3 +117,51 @@ const   modalView = document.querySelectorAll('.services_modal'),
                
               },
           });
+          /********************INPUT ANIMATION************************* */
+          const inputs = document.querySelectorAll(".input");
+
+          function focusFunc(){
+            let parent = this.parentMode;
+            if(this.value == ""){
+                parent.classList.remove("focus")
+            }
+          }
+
+          function blurFonc(){
+            let parent = this.parentMode;
+            if(this.value == ""){
+                parent.classList.remove("blur")
+            }
+          }
+
+          inputs.forEach((input) =>{
+            input.addEventListener("focus", focusFunc);
+            input.addEventListener("blur", blurFonc);
+          })
+  /********************SCROLL SECTIONS ACTIVE LINK************************ */
+const sections = document.querySelectorAll("section[id]");
+
+window.addEventListener("scroll", navHighligher);
+
+function navHighligher()
+    {
+        let scrollY = window.pageYOffset;
+
+        sections.forEach(current =>{
+            const sectionHeight = current.offsetHeight;
+            const sectionTop = current.offsetTop -50,
+            sectionId = current.hetAttribute("id");
+        })
+
+        if(scrollY > screenTop && scrollY <= screenTop + sectionHeight)
+        {
+            document.querySelector('.nav_menu a[href*=' + sectionId + ']').classList.add("active-link")
+        }
+        else
+        {
+            document.querySelector('.nav_menu a[href*=' + sectionId + ']').classList.remove("active-link")
+        }
+    }
+
+/********************SHOW SCROOL UP************************* */
+
