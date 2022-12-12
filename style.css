@@ -110,8 +110,16 @@ input{
     outline: none;
 }
 
+/* ***********==========***Dwonload***********==========** */
+.dowbload{
+    text-align: center;
+}
+.d_text{
+    color: var(--text-color);
+}
 
 /* ***********==========***Layout***********==========** */
+
 .container{
     max-width:1250px ;
     margin-left: auto;
@@ -158,11 +166,11 @@ input{
 
 .nav_logo{
     position: absolute;
-    left: 0;
+    left: 2;
     right: 0;
-    top: 1.8rem;
-    width: 40px;
-    height: 40px;
+    top: 1.0rem;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     background-color: var(--skin-color);
     text-align: center;
@@ -262,7 +270,7 @@ input{
 
 /* ********Home section******* */
 .home{
-    background:url(/assets/font.jpg) ;
+    background:url(/assets/me.jpg) ;
     background-size: cover;
     background-position: center center;
     height: 100vh;
@@ -307,9 +315,10 @@ top: 50%;
 .home_social-links:hover{
     transform: translateY(.25rem);
 }
-.home_img{
+/*.home_img{
     display: none;
-}
+    
+}*/
 
 .home_title{
     font-size: var(--biggest-font-size);
