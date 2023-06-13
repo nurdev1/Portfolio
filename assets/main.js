@@ -74,7 +74,7 @@ function togglePortfolioPupup(){
 document.querySelector(".portfolio_popup-close").addEventListener("click",togglePortfolioPupup)
 
 function portfolioItemDetails(portfolioItem){
-    document.querySelector("pp_thumbmail img").src = portfolioItem.querySelector(".work_img").src;
+    document.querySelector(".pp_thumbnail img").src = portfolioItem.querySelector(".work_img").src;
     document.querySelector(".portfolio_popup-subtitle span").innerHTML = portfolioItem.querySelector(".work_title").innerHTML;
     document.querySelector(".portfolio_popup-subtitle body").innerHTML = portfolioItem.querySelector(".portfolio item-details").innerHTML;
 }
